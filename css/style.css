@@ -1,0 +1,109 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+body {
+    background-color: black;
+    overflow: hidden;
+}
+.ground {
+    background: black;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    margin-top: 400px;
+}
+.sky {
+    position: relative;
+    background: #1d7bba;
+    width: 100%;
+    height: 400px;
+    box-shadow: inset 0 250px 100px -100px #1d7bba;
+    animation: sky-motion 15s infinite;
+}
+.grass {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 80%;
+    margin: auto;
+}
+.sun {
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: darkred;
+    box-shadow: 0 0 10px #f5ff0f;
+    animation: sun-move 15s infinite linear;
+}
+.smoke {animation: sun-move 15s infinite linear;
+    position: absolute;
+    text-align: center;
+    bottom: 30px;
+    right: 0;
+    left: 0;
+    width: 80%;
+    margin: auto;
+    opacity: 0;
+    animation: smoke-motion 15s infinite linear;
+}
+@keyframes sun-move {
+    0% {bottom: -45px; left: 0; background: darkred; width: 100px; height: 100px; box-shadow: 0 0 10px #f5ff0f;}
+    10% {bottom: 65px; left: 10%; background: #fd7d32; width: 90px; height: 90px; box-shadow: 0 0 15px #f5ff0f;}
+    20% {bottom: 155px; left: 20%; background: #fdc023; width: 80px; height: 80px; box-shadow: 0 0 20px #f5ff0f;}
+    30% {bottom: 255px; left: 30%; background: #fde618; width: 70px; height: 70px; box-shadow: 0 0 25px #f5ff0f;}
+    40% {bottom: 325px; left: 40%; background: #fdf00b; width: 60px; height: 60px; box-shadow: 0 0 30px #f5ff0f;}
+    50% {bottom: 350px; left: 50%; background: yellow; width: 50px; height: 50px; box-shadow: 0 0 35px #f5ff0f;}
+    60% {bottom: 325px; left: 60%; background: #fdf00b; width: 60px; height: 60px; box-shadow: 0 0 30px #f5ff0f;}
+    70% {bottom: 255px; left: 70%; background: #fde618; width: 70px; height: 70px; box-shadow: 0 0 25px #f5ff0f;}
+    80% {bottom: 155px; left: 80%; background: #fdc023; width: 80px; height: 80px; box-shadow: 0 0 20px #f5ff0f;}
+    90% {bottom: 65px; left: 90%; background: #fd7d32; width: 90px; height: 90px; box-shadow: 0 0 15px #f5ff0f;}
+    100% {bottom: -45px; left: 100%; background: darkred; width: 100px; height: 100px; box-shadow: 0 0 10px #f5ff0f;}
+}
+/*@keyframes sky-motion {
+    0% {background: linear-gradient(to top, #ff11de, #1d7bba)}
+    25% {background: linear-gradient(to top, #8515ff, #1d7bba)}
+    50% {background: linear-gradient(to top, #1d7bba, #1d7bba)}
+    75% {background: linear-gradient(to top, #8515ff, #1d7bba)}
+    100% {background: linear-gradient(to top, #ff1955, #1d7bba)}
+}*/
+@keyframes sky-motion {
+    0% {background: #ba0cb7; box-shadow: inset 0 250px 100px -100px #38447e;}
+    25% {background: #6b12ba; box-shadow: inset 0 250px 100px -100px #6d78e6;}
+    50% {background: #1d7bba; box-shadow: inset 0 250px 100px -100px #1d7bba;}
+    75% {background: #ba0c78; box-shadow: inset 0 250px 100px -100px #9a14e6;}
+    100% {background: #ba103a; box-shadow: inset 0 250px 100px -100px #ba4fe6;}
+}
+@keyframes smoke-motion {
+    30% {bottom: 40px; opacity: 0.1;}
+    35% {bottom: 45px; opacity: 0.2;}
+    40% {bottom: 50px; opacity: 0.3;}
+    45% {bottom: 55px; opacity: 0.2;}
+    50% {bottom: 60px; opacity: 0.1;}
+    55% {bottom: 65px; opacity: 0.2;}
+    60% {bottom: 70px; opacity: 0.3;}
+    65% {bottom: 75px; opacity: 0.2;}
+    70% {bottom: 85px; opacity: 0.0;}
+}
